@@ -161,7 +161,7 @@ public class LSharePreferUtils {
 
     public static Object get(String fileName, String key, Object defaultObject, boolean valueDecrept) {
         if (TextUtils.isEmpty(key)) {
-            return null;
+            return defaultObject;
         }
         String dataKey = convertKey(key);
         SharedPreferences sp = getSharePrefer(fileName);
@@ -199,7 +199,7 @@ public class LSharePreferUtils {
                 return sp.getLong(dataKey, (Long) defaultObject);
             }
         }
-        return null;
+        return defaultObject;
     }
 
 
