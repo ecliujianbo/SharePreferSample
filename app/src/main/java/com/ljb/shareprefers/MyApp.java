@@ -11,6 +11,7 @@ public class MyApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
         LSharePreferUtils.init(this, "liu");
     }
 }
