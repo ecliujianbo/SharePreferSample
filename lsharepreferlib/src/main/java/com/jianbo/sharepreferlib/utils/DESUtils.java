@@ -1,5 +1,7 @@
 package com.jianbo.sharepreferlib.utils;
 
+import android.content.SharedPreferences;
+
 import java.security.Key;
 
 import javax.crypto.Cipher;
@@ -7,7 +9,6 @@ import javax.crypto.Cipher;
 public class DESUtils {
     private static final String DES = "DES";
     public static String sStrDefaultKey = "123456";
-
     private Cipher mEncryptCipher = null;
 
     private Cipher mDecryptCipher = null;

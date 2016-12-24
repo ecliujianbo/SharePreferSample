@@ -1,5 +1,17 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
+publish {
+    userOrg = 'ecliujianbo' //你的用户名
+    groupId = 'com.lufficc' //你的唯一的groupId，对应com.squareup.okhttp3:okhttp:3.4.1中的com.squareup.okhttp3
+    artifactId = 'sharepre' //你的library的名字，对应com.squareup.okhttp3:okhttp:3.4.1中的okhttp
+    publishVersion = '0.1.0' //版本号
+    desc = 'This is a simple library.you can use shareprefer more easy.'
+    website = 'https://github.com/ecliujianbo' //建议填写github地址，不过不影响，这里做演示填的自己的网址
+
+    bintrayUser = 'ecliujianbo' //你的用户名
+    bintrayKey = '8760eeabc73cda6ebb205ddd9e87e8f7192c9423' //在你的账户里面查找
+}
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -29,4 +41,13 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.1.0'
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:support-v4:25.1.0'
+}
+allprojects {
+    tasks.withType(Javadoc) {
+        options{
+            encoding "UTF-8"
+            charSet 'UTF-8'
+            links "http://docs.oracle.com/javase/7/docs/api"
+        }
+    }
 }
