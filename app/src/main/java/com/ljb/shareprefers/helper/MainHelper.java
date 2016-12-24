@@ -2,8 +2,6 @@ package com.ljb.shareprefers.helper;
 
 import com.jianbo.sharepreferlib.LSharePreferUtils;
 
-import java.util.concurrent.RecursiveTask;
-
 /**
  * Created by jianbo on 2016/12/24.
  */
