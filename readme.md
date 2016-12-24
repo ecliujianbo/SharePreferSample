@@ -4,15 +4,15 @@
 Maven:
 ```
 <dependency>
-  <groupId>com.lufficc</groupId>
+  <groupId>com.ljb</groupId>
   <artifactId>sharepre</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
   <type>pom</type>
 </dependency>
 ```
 or Gradle:
 ```
-compile 'com.lufficc:sharepre:0.1.0'
+compile 'com.ljb:sharepre:0.1.1'
 ```
 ## Configuration
 - LSharePreferUtils.init(this);//在Appliaction初始化
