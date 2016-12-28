@@ -103,9 +103,8 @@ public class LSharePreferUtils {
 
     /**
      * 加密key
-     *
      * @param key 需要加密的key
-     * @return 加密后的key
+     * @return MD5加密后的key
      */
     private static String convertKey(String key) {
         return MD5Utils.MD5(key);
@@ -140,9 +139,9 @@ public class LSharePreferUtils {
     /**
      * 获取默认文件下，key 的值
      *
-     * @param key
-     * @param defaultObject
-     * @return
+     * @param key 保存数据的key
+     * @param defaultObject 默认值
+     * @return 保存的数据
      */
     public static Object get(String key, Object defaultObject) {
         return get(DEF_FILE_NAME, key, defaultObject);
@@ -159,6 +158,13 @@ public class LSharePreferUtils {
         return get(DEF_FILE_NAME, key, defaultObject, valueDecrypt);
     }
 
+    /**
+     * @param fileName 保存的文件名称
+     * @param key 保存的key值
+     * @param defaultObject 默认返回的值
+     * @param valueDecrept 是否需要解密
+     * @return 获取保存到SP的数据
+     */
     public static Object get(String fileName, String key, Object defaultObject, boolean valueDecrept) {
         if (TextUtils.isEmpty(key)) {
             return defaultObject;
