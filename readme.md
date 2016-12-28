@@ -6,13 +6,13 @@ Maven:
 <dependency>
   <groupId>com.ljb</groupId>
   <artifactId>sharepre</artifactId>
-  <version>0.1.1</version>
+  <version>0.1.2</version>
   <type>pom</type>
 </dependency>
 ```
 or Gradle:
 ```
-compile 'com.ljb:sharepre:0.1.1'
+compile 'com.ljb:sharepre:0.1.2'
 ```
 ## Configuration
 - LSharePreferUtils.init(this);//在Appliaction初始化
